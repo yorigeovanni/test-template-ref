@@ -1,0 +1,19 @@
+<table>
+	<thead>
+		<td>ID</td>
+		<td>NOM</td>
+	</thead>
+	<tbody *ngIf="template">
+    <tr>
+      <ng-container *ngFor="let item of data"
+                    [ngTemplateOutlet]="template"
+                    [ngTemplateOutletContext]="{ $implicit: item }">
+      </ng-container>
+    </tr>
+	</tbody>
+</table>
+
+<ng-template #template let-item>
+<td>{{item?.id}}</td>
+<td>{{item?.nom}}</td>
+</ng-template>

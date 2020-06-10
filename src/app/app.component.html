@@ -1,0 +1,11 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<app-table [data]="data">
+  <ng-template template="body" let-item>
+    <td>{{item.id}}</td>
+    <td>{{item.nom}}</td>
+  </ng-template>
+</app-table>
